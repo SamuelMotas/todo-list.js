@@ -9,6 +9,6 @@ function addTask() {
         return;
     }
 
-    let li = document.getElement("li");
-    
+    document.createElement("li")
+
 }
