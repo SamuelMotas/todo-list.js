@@ -2,8 +2,6 @@ let taskList = document.getElementById("tasklist");
 let taskInput = document.getElementById("taskinput");
 
 
-
-
 // Récupérer les tâches sauvegardées ou créer un tableau vide
 let savedTasks = localStorage.getItem("tasks");
 let taskArray = savedTasks ? JSON.parse(savedTasks) : [];
@@ -33,6 +31,7 @@ function createTaskElement(taskText) {
 function addTask() {
     let taskInput = document.getElementById("taskinput");
     let taskText = taskInput.value.trim();
+
 
     if (taskText === "") {
         alert("Veuillez remplir le formulaire svp");
@@ -89,7 +88,7 @@ taskArray.forEach(taskText => {
 });
 
 // ajouter une tache avec le bouton "enter" du clavier
-taskInput.addEventListener("keypress", function(event) {
+taskInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {  // Vérifie si c’est la touche Enter
         addTask();                // Appelle ta fonction addTask
     }
